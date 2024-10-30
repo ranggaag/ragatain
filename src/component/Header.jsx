@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import "./Landingpage.css";
+import { Icon } from '@iconify/react';
 
 const Header = () => {
 
     const navMenus = [
         {label: 'Home' , url: '#home'},
-        {label: 'About' , url: '#about'},
-        {label: 'Features' , url: '#features'},
         {label: 'Catalog' , url: '#catalog'},
+        {label: 'Pricing' , url: '#pricing'},
         {label: 'Contact' , url: '#contact'}
     ];
 
@@ -15,29 +14,30 @@ const Header = () => {
 
     const handleClick = () => {
         setShow(!show);
-        // console.log(show);
+        document.body.style.overflow = !show ? 'hidden' : 'auto';
     };
 
-    let menuActive = show ? "left-0" : "-left-[170px]";
 
+
+    let menuActive = show ? "left-0" : "-left-[250px]";
 
     return (
-        <div className=" navbar shadow-none bg-transparent">
-            <div className="lg:w-[1140px] container mx-auto flex py-4 z-10">
+        <div className="relative py-2 z-50">
+            <div className="container mx-auto flex py-4">
                 <div className="navbar-start">
-                    <a href="#logo" className="navbar-item  text-xl text-[#00B1A9] font-bold lg:text-4xl">
+                    <a href="#logo" className="navbar-item  text-2xl text-[#2C3E50] font-bold md:text-3xl">
                         ragatain.
                     </a>
                 </div>
-                <div className="navbar-end lg:gap-8 gap-2">
-                    <div className={`fixed flex flex-col px-10 py-20 gap-10 bg-[#00B1A9] h-full ${menuActive} top-1/2 -translate-y-1/2 shadow-md transition-all lg:gap-8 md:static md:flex-row md:translate-y-0 md:bg-transparent md:p-0 md:gap-2 md:h-auto md:shadow-none md:transition-none`}>
+                <div className="navbar-end lg:gap-4 gap-6">
+                    <div className={`fixed flex flex-col pl-10 pr-16 py-20 gap-10 bg-[#00B1A9] h-full ${menuActive} top-1/2 -translate-y-1/2 shadow-md transition-all lg:gap-4 lg:static lg:flex-row lg:translate-y-0 lg:bg-transparent lg:p-0 lg:h-auto lg:shadow-none lg:transition-none`}>
 
                         {
-                            navMenus.map((item, index) => ( 
+                            navMenus.map((item, i) => ( 
                                 <a 
-                                    key={index}
+                                    key={i}
                                     href={item.url}
-                                    className="navbar-item text-white font-bold text-sm lg:text-base md:text-[#373737] md:opacity-70"
+                                    className="navbar-item text-white font-bold text-sm lg:text-base lg:text-[#2C3E50]"
                                 >
                                     {item.label}
                                 </a>
@@ -46,11 +46,11 @@ const Header = () => {
 
                     </div>
                     <button
-                        className="rounded-full bg-white py-3 px-10  text-sm text-[#373737] font-bold lg:py-4 lg:px-14 lg:text-base"
+                        className="rounded-full bg-white py-3 px-10  text-sm text-[#2C3E50] font-bold lg:py-3 lg:px-6 md:text-base hover:text-[#00B1A9] hover:bg-white"
                     >
                         Login
                     </button>
-                    <i className="ri-menu-3-line text-3xl text-[#373737] block md:hidden" onClick={handleClick}></i>
+                    <Icon icon="gg:menu-right" className="ri-menu-3-line text-4xl text-[#373737] block lg:hidden" onClick={handleClick} />
                 </div>
                 
               

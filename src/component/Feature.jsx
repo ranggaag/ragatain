@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from "../component/card comp/Carousel"
 
 
 const Feature = () => {
@@ -17,8 +18,8 @@ const Feature = () => {
                     a lots of interesting designs for you to share Free to change themes without limits
                 </p>
             </div>
-            <div className='mt-32 flex flex-row gap-8'>
-               
+            <div className='mt-32'>
+               <Carousel />
             </div>
         </div>
     )

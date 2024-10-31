@@ -3,7 +3,7 @@ import CardFeature from './CardFeature'
 
 const Slider = () => {
   return (
-    <div>
+    <div className="flex flex-row gap-8">
          <CardFeature
                     title="Unlimited Share"
                     icon="fluent:people-team-48-filled"
@@ -11,9 +11,14 @@ const Slider = () => {
                 />
                 <CardFeature
                     title="Detail Info"
-                    icon=""
+                    icon="lucide:calendar-fold"
+                    text="Detailed event information from reception to wedding ceremony"
                 />
-                <CardFeature />
+                <CardFeature
+                  title="Countdown Timer"
+                  icon="pepicons-pop:countdown"
+                  text="Look forward to every happy time with the countdown timer feature"
+                />
     </div>
   )
 }

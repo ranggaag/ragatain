@@ -7,7 +7,7 @@ const Feature = () => {
         <div className="container mx-auto flex flex-col py-40 items-center text-center">
             <div className='flex flex-col'>
                 <h6 className="text-2xl text-[#00B1A9] font-bold">  
-                    Feature
+                    Featu
                 </h6>
                 <div className="h-3"></div>
                 <h1 className="text-4xl text-[#2C3E50] font-bold leading-[50px] md:leading-normal md:text-5xl">
